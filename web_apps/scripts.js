@@ -106,16 +106,32 @@ function displayData(matchList) {
 }
 function getOption(){
     var e = document.getElementById("mySelect").selectedIndex;
+    var w = document.getElementById("stage1div");
+    var x = document.getElementById("stage2div");
+    var y = document.getElementById("stage3div");
+    var z = document.getElementById("stage4div");
     if (document.getElementsByTagName("option")[e].value=="stage1"){
-        alert("stage 1 clicked");
+        w.style.display = "block";
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
     }
     if (document.getElementsByTagName("option")[e].value=="stage2"){
-        alert("stage 2 clicked");
+        w.style.display = "none";
+        x.style.display = "block";
+        y.style.display = "none";
+        z.style.display = "none";
     }
     if (document.getElementsByTagName("option")[e].value=="stage3"){
-        alert("stage 3 clicked");
+        w.style.display = "none";
+        x.style.display = "none";
+        y.style.display = "block";
+        z.style.display = "none";
     }
     if (document.getElementsByTagName("option")[e].value=="stage4"){
-        alert("stage 4 clicked");
+        w.style.display = "none";
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "block";
     }
 }
