@@ -1,4 +1,3 @@
-
 // Create a request variable and assign a new XMLHttpRequest object to it.
 var request = new XMLHttpRequest();
 
@@ -83,8 +82,40 @@ function displayData(matchList) {
        match.competitor1.name + " vs " + match.competitor2.name + " " +
        match.competitor1.score + " - " + match.competitor2.score
     )
-    div.appendChild(node);
-    var element = document.getElementById("root");
-    element.appendChild(div);
+    if (match.stage == "Stage 1"){
+        div.appendChild(node);
+        var element = document.getElementById("stage1");
+        element.appendChild(div);
+    }
+    if (match.stage == "Stage 2"){
+        div.appendChild(node);
+        var element = document.getElementById("stage2");
+        element.appendChild(div);
+     }
+    if (match.stage == "Stage 3"){
+        div.appendChild(node);
+        var element = document.getElementById("stage3");
+        element.appendChild(div);
+    }
+    if (match.stage == "Stage 4"){
+        div.appendChild(node);
+        var element = document.getElementById("stage4");
+        element.appendChild(div);
+    }
   });
+}
+function getOption(){
+    var e = document.getElementById("mySelect").selectedIndex;
+    if (document.getElementsByTagName("option")[e].value=="stage1"){
+        alert("stage 1 clicked");
+    }
+    if (document.getElementsByTagName("option")[e].value=="stage2"){
+        alert("stage 2 clicked");
+    }
+    if (document.getElementsByTagName("option")[e].value=="stage3"){
+        alert("stage 3 clicked");
+    }
+    if (document.getElementsByTagName("option")[e].value=="stage4"){
+        alert("stage 4 clicked");
+    }
 }
