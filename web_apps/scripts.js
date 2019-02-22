@@ -84,22 +84,22 @@ function displayData(matchList) {
     )
     if (match.stage == "Stage 1"){
         div.appendChild(node);
-        var element = document.getElementById("stage1");
+        var element = document.getElementById("stage1div");
         element.appendChild(div);
     }
     if (match.stage == "Stage 2"){
         div.appendChild(node);
-        var element = document.getElementById("stage2");
+        var element = document.getElementById("stage2div");
         element.appendChild(div);
      }
     if (match.stage == "Stage 3"){
         div.appendChild(node);
-        var element = document.getElementById("stage3");
+        var element = document.getElementById("stage3div");
         element.appendChild(div);
     }
     if (match.stage == "Stage 4"){
         div.appendChild(node);
-        var element = document.getElementById("stage4");
+        var element = document.getElementById("stage4div");
         element.appendChild(div);
     }
   });
