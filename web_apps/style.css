@@ -1,1 +1,19 @@
-.hidden { display: none; }
+#title {
+    text-align: center;
+}
+
+.stage {
+    text-align: center;
+}
+
+.match > div{
+  display: inline-block;
+}
+
+.team > div {
+    display: inline-block;
+}
+
+img {
+    height: 80px;
+}

@@ -15,7 +15,7 @@ function displayData(matchList) {
     }
     currStage = match.stage;
 
-    var dateDiv = $("<div class = 'match'></div>");
+    var dateDiv = $("<div class = 'date'></div>");
     dateDiv.text(match.startDate);
     if (currDate!=match.startDate){
       $("#root").append(dateDiv);
@@ -28,7 +28,7 @@ function displayData(matchList) {
 
     var matchDiv = $("<div class = 'match'></div>");
 
-    createTeamDiv(match.competitor1, matchDiv);
+    createTeamDiv(match.competitor1, matchDiv, 1);
 
     if (match.competitor1 != null) {
       var scoreDiv = $("<div class = 'score'></div>");
@@ -36,12 +36,12 @@ function displayData(matchList) {
       matchDiv.append(scoreDiv);
     }
 
-    createTeamDiv(match.competitor2, matchDiv);
+    createTeamDiv(match.competitor2, matchDiv, 2);
     $("#root").append(matchDiv);
   });
 }
 
-function createTeamDiv(team, container) {
+function createTeamDiv(team, container, side) {
   var name;
   var logo;
   if (team != null) {
@@ -62,8 +62,14 @@ function createTeamDiv(team, container) {
   var imgElement = $("<img src= " + logo + " >");
   logoDiv.append(imgElement);
   //append to container div
-  teamDiv.append(nameDiv);
-  teamDiv.append(logoDiv);
+  if (side == 1) {
+     teamDiv.append(nameDiv);
+     teamDiv.append(logoDiv);
+  }
+  else {
+    teamDiv.append(logoDiv);
+    teamDiv.append(nameDiv);
+  }
   container.append(teamDiv);
 
 }
