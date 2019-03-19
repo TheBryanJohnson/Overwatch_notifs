@@ -1,19 +1,94 @@
 #title {
-    text-align: center;
+  text-align: center;
+  font-size: 6vw;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  border-bottom: 5px solid black;
+
 }
 
 .stage {
-    text-align: center;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: bold;
+  text-transform; uppercase;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.date {
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.time {
+
+}
+
+.match {
+  text-align: center;
+  white-space: nowrap;
 }
 
 .match > div{
+  text-align: center;
+  position: relative;
   display: inline-block;
+  white-space:nowrap;
+
+
 }
 
 .team > div {
-    display: inline-block;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
 }
 
+.team{
+  background: #7caeff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+  transform: skewX(-30deg);
+  -ms-transform: skewX(-30deg);
+  -webkit-transform: skewX(-30deg);
+}
+
+.name{
+  font-size: 20px;
+  vertical-align: middle;
+  width: 275px;
+  margin: auto;
+  white-space: nowrap;
+  transform: skewX(30deg);
+  -ms-transform: skewX(30deg);
+  -webkit-transform: skewX(30deg);
+}
+
+.logo{
+  vertical-align: middle;
+  width: 80px;
+  white-space: nowrap;
+  transform: skewX(30deg);
+  -ms-transform: skewX(30deg);
+  -webkit-transform: skewX(30deg);
+}
+.score{
+  width: 20px;
+  font-size: 20px;
+  vertical-align: middle;
+  white-space: nowrap;
+  transform: skewX(30deg);
+  -ms-transform: skewX(30deg);
+  -webkit-transform: skewX(30deg);
+}
+
+
 img {
-    height: 80px;
+  height: 50px;
 }
