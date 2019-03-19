@@ -30,11 +30,11 @@ function displayData(matchList) {
 
     createTeamDiv(match.competitor1, matchDiv, 1);
 
-    if (match.competitor1 != null) {
-      var scoreDiv = $("<div class = 'score'></div>");
-      scoreDiv.text(match.competitor1.score + ' - ' + match.competitor2.score);
-      matchDiv.append(scoreDiv);
-    }
+    //if (match.competitor1 != null) {
+      //var scoreDiv = $("<div class = 'score'></div>");
+      //scoreDiv.text(match.competitor1.score + ' - ' + match.competitor2.score);
+      //matchDiv.append(scoreDiv);
+    //}
 
     createTeamDiv(match.competitor2, matchDiv, 2);
     $("#root").append(matchDiv);
@@ -44,14 +44,20 @@ function displayData(matchList) {
 function createTeamDiv(team, container, side) {
   var name;
   var logo;
+  var score
   if (team != null) {
     name = team.name;
     logo = team.logo;
+    score = team.score;
   }
   else {
     name = "TBD";
     logo = "";
+    score = "0";
   }
+  //create div for team score
+  var scoreDiv =  $("<div class = 'score'></div>");
+  scoreDiv.text(score);
   //create div with class team
   var teamDiv = $("<div class ='team'></div>");
   //create name div with name text
@@ -65,8 +71,10 @@ function createTeamDiv(team, container, side) {
   if (side == 1) {
      teamDiv.append(nameDiv);
      teamDiv.append(logoDiv);
+     teamDiv.append(scoreDiv);
   }
   else {
+    teamDiv.append(scoreDiv);
     teamDiv.append(logoDiv);
     teamDiv.append(nameDiv);
   }
